@@ -2,24 +2,56 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Product;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Product::create([
+            'name' => 'Game',
+            'description' => 'Video game controller',
+            'image' => 'game.png',
+            'price' => 100
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Product::create([
+            'name' => 'Safe',
+            'description' => 'Security safe',
+            'image' => 'safe.png',
+            'price' => 200
+        ]);
+
+        Product::create([
+            'name' => 'Submarine',
+            'description' => 'Yellow submarine',
+            'image' => 'submarine.png',
+            'price' => 300
+        ]);
+
+        Product::create([
+            'name' => 'laptop',
+            'description' => 'chrome book',
+            'image' => 'laptop.png',
+            'price' => 500
+        ]);
+
+        Product::create([
+            'name' => 'mouse',
+            'description' => 'mouse computer',
+            'image' => '1780530334.png',
+            'price' => 26
+        ]);
+
+        Product::create([
+            'name' => 'clock',
+            'description' => 'jam',
+            'image' => '1780542388.png',
+            'price' => 14
         ]);
     }
 }
